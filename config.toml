@@ -3,7 +3,7 @@ baseURL = "https://ohsnapcoders.onrender.com"
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
-title = "Oh Snap coders!"
+title = "Oh Snap! coders"
 metaDataFormat = "yaml"
 disqusShortname = "YOUR_DISQUS_SHORT_NAME"
 googleAnalytics = "UA-XXXXXXXXX-X"
