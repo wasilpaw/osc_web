@@ -1,16 +1,23 @@
-baseURL = "ohsnapcoders.com"
+baseURL = "http://localhost:1313"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
 title = "Oh Snap coders!"
+metaDataFormat = "yaml"
+disqusShortname = "YOUR_DISQUS_SHORT_NAME"
+googleAnalytics = "UA-XXXXXXXXX-X"
+paginate = 4
 
 # Change the default theme to be use when building the site with Hugo
-theme = "FeelIt"
+theme = "hago"
 
 [params]
-  # FeelIt theme version
-  version = "1.0.X"
+  description = "DESCRIPTION"
+  subtitle = "YOUR_SUB_TITLE"
+  logo = "/images/logo.png"
+  favicon = "/favicon.ico"
+  comments = true
 
 [menu]
   [[menu.main]]

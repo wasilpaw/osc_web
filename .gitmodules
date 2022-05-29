@@ -1,0 +1,6 @@
+[submodule "hago"]
+	path = hago
+	url = https://github.com/gyuha/hago.git
+[submodule "themes/hago"]
+	path = themes/hago
+	url = https://github.com/gyuha/hago.git

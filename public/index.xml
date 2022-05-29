@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oh Snap coders!</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Oh Snap coders!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Feb 2022 20:22:05 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Construction</title>
+      <link>http://localhost:1313/posts/construction/</link>
+      <pubDate>Sun, 27 Feb 2022 20:22:05 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/construction/</guid>
+      <description>While this website is under Construction, do check out our content on https://ohsnapcoders.wixsite.com/mysite</description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>http://localhost:1313/resources/links/</link>
+      <pubDate>Sun, 26 Dec 2021 19:51:01 +0000</pubDate>
+      
+      <guid>http://localhost:1313/resources/links/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

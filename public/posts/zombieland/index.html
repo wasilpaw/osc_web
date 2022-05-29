@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Zombieland - Oh Snap coders!</title><meta name="description" content=""><meta property="og:title" content="Zombieland" />
+<meta property="og:description" content="Overview In this project, we will build a game involving zombies.  Each zombie will be represented by two blocks on a square arena. They will be able to move around the arena. Each zombie will be controlled using an instance (object) of a class. Player will need to walk between zombies and avoid bites.
+Classes and objects Classes and objects are related to Object Oriented Programming and provide a good way to neatly structure code around common behaviours." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="ohsnapcoders.com/posts/zombieland/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-05T22:01:15+00:00" />
+<meta property="article:modified_time" content="2022-03-05T22:01:15+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Zombieland"/>
+<meta name="twitter:description" content="Overview In this project, we will build a game involving zombies.  Each zombie will be represented by two blocks on a square arena. They will be able to move around the arena. Each zombie will be controlled using an instance (object) of a class. Player will need to walk between zombies and avoid bites.
+Classes and objects Classes and objects are related to Object Oriented Programming and provide a good way to neatly structure code around common behaviours."/>
+<meta name="application-name" content="Oh Snap coders!">
+<meta name="apple-mobile-web-app-title" content="Oh Snap coders!"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="ohsnapcoders.com/posts/zombieland/" /><link rel="prev" href="ohsnapcoders.com/posts/construction/" /><link rel="stylesheet" href="/ohsnapcoders.com/css/page.min.css"><link rel="stylesheet" href="/ohsnapcoders.com/css/home.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Zombieland",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "ohsnapcoders.com\/posts\/zombieland\/"
+        },"genre": "posts","wordcount":  2554 ,
+        "url": "ohsnapcoders.com\/posts\/zombieland\/","datePublished": "2022-03-05T22:01:15+00:00","dateModified": "2022-03-05T22:01:15+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Pawel Wasilewski"},"author": {
+                "@type": "Person",
+                "name": "Pawel Wasilewski"
+            },"description": ""
+    }
+    </script></head><body data-header-desktop="" data-header-mobile=""><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="ohsnapcoders.com/" title="Oh Snap coders!">Oh Snap coders!</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/ohsnapcoders.com/posts/"> Posts </a><a class="menu-item" href="/ohsnapcoders.com/tags/"> Tags </a><a class="menu-item" href="/ohsnapcoders.com/resources/"> Resources </a><a class="menu-item" href="/ohsnapcoders.com/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="ohsnapcoders.com/" title="Oh Snap coders!">Oh Snap coders!</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/ohsnapcoders.com/posts/" title="">Posts</a><a class="menu-item" href="/ohsnapcoders.com/tags/" title="">Tags</a><a class="menu-item" href="/ohsnapcoders.com/resources/" title="">Resources</a><a class="menu-item" href="/ohsnapcoders.com/categories/" title="">Categories</a><div class="menu-item"><a href="javascript:void(0);" class="theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single" data-toc="disable"><div class="single-card" ><h2 class="single-title animated flipInX">Zombieland</h2><div class="post-meta">
+                <div class="post-meta-line"><span class="post-author"><a href="ohsnapcoders.com/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Pawel Wasilewski</a></span></div>
+                <div class="post-meta-line"><span><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-05">2022-03-05</time></span>&nbsp;<span><i class="fas fa-pencil-alt fa-fw"></i>&nbsp;2554 words</span>&nbsp;
+                    <span><i class="far fa-clock fa-fw"></i>&nbsp;12 minutes</span>&nbsp;</div>
+            </div>
+            
+            <hr><div class="details toc" id="toc-static"  data-kept="">
+                    <div class="details-summary toc-title">
+                        <span>Contents</span>
+                        <span><i class="details-icon fas fa-angle-right"></i></span>
+                    </div>
+                    <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a>
+      <ul>
+        <li><a href="#classes-and-objects">Classes and objects</a></li>
+      </ul>
+    </li>
+    <li><a href="#implementation">Implementation</a>
+      <ul>
+        <li><a href="#base-code">Base code</a></li>
+        <li><a href="#more-zombies">More zombies</a></li>
+        <li><a href="#getting-the-zombies-to-move">Getting the zombies to move</a></li>
+        <li><a href="#zombies-move-randomly">Zombies move randomly</a></li>
+        <li><a href="#zombies-spawn-in-random-location">Zombies spawn in random location</a></li>
+        <li><a href="#runaway-zombies">Runaway Zombies</a></li>
+        <li><a href="#the-player-in-the-arena">The player in the arena</a></li>
+        <li><a href="#zombies-chasing-the-player">Zombies chasing the Player</a></li>
+        <li><a href="#zombies-chasing-only-if-player-is-close">Zombies chasing only if Player is close</a></li>
+        <li><a href="#zombies-bite">Zombies bite</a></li>
+        <li><a href="#large-number-of-zombies">Large number of zombies</a></li>
+        <li><a href="#steve-collecting-diamonds">Steve collecting diamonds</a></li>
+        <li><a href="#new-zombies-appear-over-time">New zombies appear over time</a></li>
+        <li><a href="#counting-time">Counting time</a></li>
+        <li><a href="#become-a-beta-tester">Become a beta tester</a></li>
+        <li><a href="#challenge---performance-tuning">Challenge - performance tuning</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </div><div class="content" id="content"><h2 id="overview">Overview</h2>
+<p>In this project, we will build a game involving zombies.
+<figure><img src="/zb_arena.JPG"/>
+</figure>
+
+Each zombie will be represented by two blocks on a square arena. They will be able to move around the arena. Each zombie will be controlled using an instance (object) of a class. Player will need to walk between zombies and avoid bites.</p>
+<h3 id="classes-and-objects">Classes and objects</h3>
+<p>Classes and objects are related to Object Oriented Programming and provide a good way to neatly structure code around common behaviours. You can learn about them from these two videos:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=8yjkWGRlUmY" target="_blank" rel="noopener noreffer">Introduction to Classes and Objects</a></li>
+<li><a href="https://www.youtube.com/watch?v=wfcWRAxRVBA" target="_blank" rel="noopener noreffer">Classes and Objects with Python</a></li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<h3 id="base-code">Base code</h3>
+<p>You start with the base code that will build the arena and create two zombies. Each zombie will be based on the Zombie class.
+A zombie will have it&rsquo;s coordinates and colour. The class definition includes the constructor <strong>init</strong>() which builds the zombie based on the coordinates passed as arguments</p>
+<p>Copy the below code into a new python file.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">mcpi.minecraft</span> <span class="k">as</span> <span class="nn">minecraft</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">mcpi.block</span> <span class="k">as</span> <span class="nn">block</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">mc</span> <span class="o">=</span> <span class="n">minecraft</span><span class="o">.</span><span class="n">Minecraft</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### begining of Zombie class definition</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Zombie</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># the constructor</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">colour</span> <span class="o">=</span> <span class="mi">13</span>  <span class="c1"># zombie will be green</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">WOOL</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>  <span class="c1"># build the bottom block of the zombie</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mc</span><span class="o">.</span><span class="n">setBlock</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">z</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">WOOL</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">colour</span><span class="p">)</span>  <span class="c1"># build the upper block of the zombie</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### end of Zombie class definition</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">X1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>  <span class="c1"># coordinates of the first corner</span>
+</span></span><span class="line"><span class="cl"><span class="n">Y</span> <span class="o">=</span> <span class="mi">74</span>
+</span></span><span class="line"><span class="cl"><span class="n">Z1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">390</span>
+</span></span><span class="line"><span class="cl"><span class="n">SIZE</span> <span class="o">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl"><span class="n">X2</span> <span class="o">=</span> <span class="n">X1</span> <span class="o">+</span> <span class="n">SIZE</span>  <span class="c1"># coordinates of the opposite corner depends on the SIZE constant</span>
+</span></span><span class="line"><span class="cl"><span class="n">Z2</span> <span class="o">=</span> <span class="n">Z1</span> <span class="o">+</span> <span class="n">SIZE</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">mc</span><span class="o">.</span><span class="n">setBlocks</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">Y</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">AIR</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>  <span class="c1"># clean up the area</span>
+</span></span><span class="line"><span class="cl"><span class="n">mc</span><span class="o">.</span><span class="n">setBlocks</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">Y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Z1</span><span class="p">,</span> <span class="n">X2</span><span class="p">,</span> <span class="n">Y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Z2</span><span class="p">,</span> <span class="n">block</span><span class="o">.</span><span class="n">BEDROCK</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>  <span class="c1"># build the ground</span>
+</span></span><span class="line"><span class="cl"><span class="n">mc</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">setTilePos</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span> <span class="n">Y</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">Z1</span><span class="p">)</span>  <span class="c1"># teleport the player above the zombieland</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">first</span> <span class="o">=</span> <span class="n">Zombie</span><span class="p">(</span><span class="o">-</span><span class="mi">47</span><span class="p">,</span> <span class="mi">74</span><span class="p">,</span> <span class="o">-</span><span class="mi">388</span><span class="p">)</span>  <span class="c1"># create the first Zombie object within the arena</span></span></span></code></pre></div>
+Test your code. You should see a Zombie (two green blocks) on the arena.</p>
+<h3 id="more-zombies">More zombies</h3>
+<p>We need more zombies. Add two or three additional zombies, each in a different location within the arena. To do this, copy the line where the first instance of zombie has been created. Ensure each zombie has been assigned to a new variable.
+Test your code. Can you see all of the zombies?
+Let&rsquo;s add randomness when defining the location of the zombies by using randint() as X and Z parameters of the constructor. The range for the randint() should match the area limits.</p>
+<figure><img src="/zb_random_location.JPG"/>
+</figure>
+
+Apply the randomness to all your zombies.
+Test your code</p>
+<h3 id="getting-the-zombies-to-move">Getting the zombies to move</h3>
+<p>Our zombies are bit static. We will add a simple method to make the zombies move.
+Add the below code within the Zombie class definition. The indentation should match the constructor.
+<figure><img src="/zb_move.JPG"/>
+</figure>
+
+In addition, we should call this new method for each zombie. Let&rsquo;s do it within a loop at the very end of the code. Adding the sleep() function will slow down our zombies. Remember to include time library at the top of your program.</p>
+<figure><img src="/zb_loop.JPG"/>
+</figure>
+
+<p>Test your code. Are all the zombies moving?</p>
+<h3 id="zombies-move-randomly">Zombies move randomly</h3>
+<p>Randomness plays an important role in games as it makes events less predictable and more unique.
+We can make the zombies move in different directions. We will use random.randint() function. By defining the range for both x an z to be between -1 and 1 we will cover all 8 blocks on the arena surrounding a zombie. One of the options is also that the zombie will not move. This will happen when both randint() calls return 0.
+Please add a new method within the Zombie class definition.
+<figure><img src="/zb_random_move.JPG"/>
+</figure>
+<p>Let&rsquo;s also call these new methods within the loop instead of the .move() method for each of your zombies.
+<figure><img src="/zb_move_random_loop.JPG"/>
+</figure>
+
+Test your code. Are the movements random?</p>
+<h3 id="zombies-spawn-in-random-location">Zombies spawn in random location</h3>
+<p>We can also start with creating the zombies on the random locations within the arena.
+To do this, we will get the random coordinates where the range will be taken from the arena ranges.
+Modify the code section where the zombies are created.
+<figure><img src="/zb_random_spawn.JPG"/>
+</figure>
+
+Test your code.</p>
+<h3 id="runaway-zombies">Runaway Zombies</h3>
+<p>While testing you might have noticed that our zombies don&rsquo;t respect the boundaries of the arena&hellip;
+<figure><img src="/zb_runaway_zombie.JPG"/>
+</figure>
+
+We need to explicitly limit their moves if the new coordinates would lie outside of the arena.
+Add the below conditional statement and the new variables inside the randomMove() method.
+<figure><img src="/zb_limits.JPG"/>
+</figure>
+<p>Test your code. You might temporarily hardcode the coordinates of your zombie and place it on the edge so that it quicker to validate the changes. Zombies on the edge should be static more often (4/9 chances vs 5/9 to move)</p>
+<h3 id="the-player-in-the-arena">The player in the arena</h3>
+<p>Lets firstly teleport the player to the corner of the arena.
+Please update the &ldquo;setTilePos()&rdquo; so that that y coordinate matches the arena.</p>
+<figure><img src="/zb_teleport.JPG"/>
+</figure>
+
+<p>The player should not be able to avoid zombies by flying over them. We will ensure this by checking the y coordinate and bringing player back to the arena level if needed.
+Create a new function &ldquo;checkPlayerlocation()&rdquo; just below the Zombie class definition.</p>
+<figure><img src="/zb_location_check.JPG"/>
+</figure>
+
+<p>Now add the function call within the main game loop.</p>
+<figure><img src="/zb_location_call.JPG"/>
+</figure>
+
+<p>Test your code. Is the player starting from the corner of the arena. What happens if you try to fly or dig under?</p>
+<h3 id="zombies-chasing-the-player">Zombies chasing the Player</h3>
+<p>Zombies are not very smart but when they smell the player they will chase him.
+Let&rsquo;s add two more methods that will make the zombie capable of walking towards the player.
+Please add the below code inside the Zombie class definition. Remember to keep the same indentation as the other methods.</p>
+<figure><img src="/zb_chase_code.JPG"/>
+</figure>
+
+<p>Let&rsquo;s look into these two functions in more details starting the with walk() method. You might have noticed that that code in that function looks very similar to randomMove(). In both chasing and randomly moving modes, the zombie has to do the same physical move. Rather then having the same code in both methods, we will extract it into a new method which could be then called from any other function that would require walking. This is an implemantion of a software engineering principle called DRY - Don&rsquo;t Repeat Yourself.
+The walk() method includes all the checks that we had before plus one new. At the begging the function, the move is not allowed if another zombie already occupies the target location.</p>
+<p>The main logic in chasePlayer() method is to identify in which direction should be the next step.
+Let&rsquo;s look at an example.
+<figure><img src="/zb_example.JPG"/>
+</figure>
+
+The player&rsquo;s coordinates here are (5,25) while our zombie stands at (7,25). To identify the new location for a zombie, we will subtract the X coordinates, 5 - 7 = -2. Every time the result is negative, we will lower to value of X coordinate for the zombie&rsquo;s next move. In case the result would be positive, zombie should go the opposite way. Thus, the x coordinate should be increased.</p>
+<p>Let&rsquo;s call the chasePlayer() function for one of the zombies in the main game loop.
+<figure><img src="/zb_chase_call.JPG"/>
+</figure>
+<p>Test your code. Is one of the zombies chasing you? What happens if you run away from the arena?</p>
+<h3 id="zombies-chasing-only-if-player-is-close">Zombies chasing only if Player is close</h3>
+<p>Our zombies should chase the player only if it&rsquo;s close enough to smell him.
+We already have one method for walking randomly and one for chasing. We can now rewrite the move() method to activate either one or the other. This will depend on the distance between zombie and player.
+Update the move(self) method so that it has the below code.
+<figure><img src="/zb_move_new.JPG"/>
+</figure>
+
+In addition, update the main loop function so that the updated move() method is called.
+<figure><img src="/zb_loop_move_new.JPG"/>
+</figure>
+
+Test your code. Are zombies chasing the player when the distance is 5 or less blocks? Can you change the code to make the zombies sense you for a longer distance?</p>
+<h3 id="zombies-bite">Zombies bite</h3>
+<p>Zombies are known to bite people&hellip; The player will get three lives and every bite will take one life. The game would finish when the last life is lost.</p>
+<p>We will need a new variable for holding the number of remaining lives. Add the line marked with red below. This should be added somewhere below the Zombie class definition but above the main game loop.
+<figure><img src="/zb_lives_init.JPG"/>
+</figure>
+
+We will also need a new method to execute the biting. Add the below code within the Zombie class definition. Again, remember that all class methods should have the same indentation.
+<figure><img src="/zb_bite.JPG"/>
+</figure>
+
+The bite() method should be called only when Zombie stands exactly next to the player.
+Add the following three lines inside the .move() method.
+<figure><img src="/zb_move_bite.JPG"/>
+</figure>
+
+Test your code. Do you get a message about being bitten when the zombie stands next to you?</p>
+<p>We still need to finish the game if the number of remaining lives is down to zero.
+Add this code at the bottom of the main game loop.
+<figure><img src="/zb_lives_loop.JPG"/>
+</figure>
+
+Test your code. Does the game finish after three bites? You would still be able to move around but the zombies would be still because your program finished executing.</p>
+<h3 id="large-number-of-zombies">Large number of zombies</h3>
+<p>We could add more zombies by creating more objects one by one. However, this would increase the size of the code and for each of them we would need to create a separate variable. It is far more flexible to use lists and iterate over them with loops.
+As the first step, please remove the lines of code where you previously created Zombie objects.
+Then add the lines marked as red below. This should be placed at the very bottom of you program where the main game loop is.
+<figure><img src="/zb_zombie_list.JPG"/>
+</figure>
+
+The first section (lines 104-108 on the picture) is responsible for creation of a configurable number of zombies. They are being added one by one to the list.
+The code in lines 113-114 iterates over each zombie in the list and executes the basic move() method on it.</p>
+<p>Test your code. Can you see 5 zombies walking? Try increasing the number. The number of zombies would have an impact on the performance. That will depend also on your computer&rsquo;s resources.</p>
+<h3 id="steve-collecting-diamonds">Steve collecting diamonds</h3>
+<p>The player will have an opportunity to increase the number of lives available by collecting diamonds. At any point of time there will be one diamond and its location will be randomly determined.
+Let&rsquo;s create a new function for checking if a diamond has been collected by the player. This function definition should be placed above the main game loop but outside of the zombie class.
+<figure><img src="/zb_diamond_funct.JPG"/>
+</figure>
+
+The function uses the pattern we applied in some other projects already where all of the hit events are checked. Once we identify a block of diamond type as hit, we would increase the counter of available diamonds. If the new number of diamonds equals the predefined ratio for a new life, we would increase the number of lives and zero the diamonds counter. Once a diamond is collected, it should vanish and a new diamond should be created.
+Remember to initiate the values for the DIAMONDS_PER_LIFE constant and diamondsInBackpack variable outside of the function definition (last two lines in the picture above).
+Now that we have the function defined, we need to to add code to create the first diamond just before the main game loop and add the function call within the loop. Add the two lines marked with red below to your code.
+<figure><img src="/zb_diamond_check.JPG"/>
+</figure>
+
+There is a scenario that we need to handle and that&rsquo;s when a zombie would like to walk onto a diamond block. In that case, we would lose the diamond as it would be overwritten by Zombie block.
+To prevent this we need to extend the conditional statement in the walk method to stop zombies if the target location already contains a diamond. Update the line inside walk() method marked as red.
+<figure><img src="/zb_walk_check.JPG"/>
+</figure>
+<p>Test your code. Can you spot a diamond within the arena? Do you see a message once you right click on the diamonds from short distance (you might need to hold a sword for this to work)? Do you get an extra life once you collected 5 diamonds?</p>
+<h3 id="new-zombies-appear-over-time">New zombies appear over time</h3>
+<p>The game will get more difficult the longer you play it. We will achieve this by gradually adding more zombies to the arena over time. Add the lines marked with red below.
+<figure><img src="/zb_new_zombies.JPG"/>
+</figure>
+
+We start with initiating NEW_ZOMBIE_FREQUENCY constant which defines how many iterations must take place for a new zombie to be created. We will be using &ldquo;iteration&rdquo; variable to count how many iterations passed.
+The new conditional statement is using the module operator &ldquo;%&rdquo;. It returns the reminder from division of the of the two values. The &ldquo;iteration&rdquo; variable is incremented by 1 with every iteration and only once every 5 iterations the reminder from division will be equal 0. That the moment we will create a new zombie and add it to the list.
+Test your code. Do you have new zombies popping up?</p>
+<h3 id="counting-time">Counting time</h3>
+<p>The player needs to stay alive for as long as possible. In this step, we will measure the time.
+We will need to import the datetime library.
+<figure><img src="/zb_date_time.JPG"/>
+</figure>
+
+We will also take a timestamp at the beginning of the game and at the end. Subtracting the two will give the number of seconds to display.
+Add the lines marked with red to your code.
+<figure><img src="/zb_time_check.JPG"/>
+</figure>
+
+Test your code. Does it display the number of seconds for the game?</p>
+<h3 id="become-a-beta-tester">Become a beta tester</h3>
+<p>Beta testers are people who test early versions of applications and are actually paid to do that. Your goal as a beta tester is to find bugs but also provide guidance how playing the game might be more enjoyable.
+To do that, you can test different combination of the game parameters. For example, you could tweak the size of the arena (&ldquo;SIZE&rdquo;), how many zombies are created at the start (&ldquo;NUMBER_OF_ZOMBIES&rdquo;), how often are new zombies created (&ldquo;NEW_ZOMBIE_FREQUENCY&rdquo;), how short are the gaps between iterations (the argument of time.sleep()), how many diamonds are required for a new life (&ldquo;DIAMONDS_PER_LIFE&rdquo;) or how far can zombie sense you (&ldquo;ZOMBIE_SMELL_RANGE&rdquo;). Test different values of these parameters.</p>
+<h3 id="challenge---performance-tuning">Challenge - performance tuning</h3>
+<p>​While testing with some, more demanding combination of parameters (for example with a large number of zombies) your game will probably not be very responsive. Performance tuning is a form of refactoring where the code is modified with the aim to improve among others responsiveness while keeping the same functionality.
+In the case of our game, one of the biggest culprits for performance is the mc.player.getTilePos() function. Every time this function is called, the information needs to be read from the server and that takes time even if both applications are on the same computer. The main problem is that we are calling this function multiple times (can you count how many?) during a single iteration of the main game loop even though the player&rsquo;s location would probably stay the same for such a short time.
+The solution to this problem is to read the player&rsquo;s position once and pass the value to other functions as an argument.</p>
+<p>On the main game loop code, it could look like this:
+<figure><img src="/zb_tuning.JPG"/>
+</figure>
+
+You would have to modify the relevant functions&rsquo; definitions to accept the parameter and use it in their body instead of calling the mc.player.getTilePos() function.
+Test your code. Can you see an improvement?</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info"><div class="post-info-line"><div class="post-info-mod">
+                <span>Updated on 2022-03-05</span>
+            </div><div class="post-info-mod"></div>
+        </div></div><div class="post-nav"><a href="ohsnapcoders.com/posts/construction/" class="prev" rel="prev" title="Construction"><i class="fas fa-angle-left fa-fw"></i>Previous Post</a></div></div>
+</div></article></div>
+            </main>
+            <footer class="footer"><div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/khusika/FeelIt" target="_blank" rel="noopener noreffer" title="FeelIt 1.0.1"><i class="fas fa-hand-holding-heart fa-fw"></i> FeelIt</a>
+        </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="ohsnapcoders.com/"></a></span></div>
+</div>
+</footer>
+        </div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-chevron-up fa-fw"></i>
+            </a></div><link rel="stylesheet" href="/ohsnapcoders.com/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/ohsnapcoders.com/lib/animate/animate.min.css"><script src="/ohsnapcoders.com/lib/lazysizes/lazysizes.min.js"></script><script src="/ohsnapcoders.com/lib/clipboard/clipboard.min.js"></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script src="/ohsnapcoders.com/js/theme.min.js"></script></body></html>
