@@ -118,7 +118,7 @@ Now add the function call within the main game loop.
 Test your code. Is the player starting from the corner of the arena. What happens if you try to fly or dig under?
 
 ### Zombies chasing the Player
-Zombies are not very smart but when they smell the player they will chase him.
+Zombies are not very smart but when they smell the player they will chase her.
 Let's add two more methods that will make the zombie capable of walking towards the player.
 Please add the below code inside the Zombie class definition. Remember to keep the same indentation as the other methods.
 
@@ -130,6 +130,7 @@ The walk() method includes all the checks that we had before plus one new. At th
 The main logic in chasePlayer() method is to determine the direction of the next step.
 Let's look at an example.
 {{<figure src="/zb_example.JPG">}}
+
 The player's coordinates here are (5,25) while our zombie stands at (7,25). To identify the new location for a zombie, we will subtract the X coordinates, 5 - 7 = -2. Every time the result is negative, we will lower to value of X coordinate for the zombie's next move. In case the result would be positive, zombie should go the opposite way. Thus, the x coordinate would be increased.
 
 Let's call the chasePlayer() function for one of the zombies in the main game loop.
@@ -137,7 +138,7 @@ Let's call the chasePlayer() function for one of the zombies in the main game lo
 
 Test your code. Is one of the zombies chasing you? What happens if you run away from the arena?
 
-### Zombies chasing only if Player is close
+### Zombies chasing only if the player is close
 Our zombies should chase the player only if it's close enough to smell him.
 We already have one method for walking randomly and one for chasing. We can now rewrite the move() method to activate either one or the other. This will depend on the distance between the zombie and the player.
 Update the move(self) method so that it has the below code.
