@@ -125,12 +125,12 @@ Please add the below code inside the Zombie class definition. Remember to keep t
 {{<figure src="/zb_chase_code.JPG">}}
 
 Let's look into these two functions in more details starting the with walk() method. You might have noticed that that code in that function looks very similar to randomMove(). In both chasing and randomly moving modes, the zombie has to do the same physical move. Rather then having the same code in both methods, we will extract it into a new method which could be then called from any other function that would require walking. This is an implemantion of a software engineering principle called DRY - Don't Repeat Yourself.
-The walk() method includes all the checks that we had before plus one new. At the begging the function, the move is not allowed if another zombie already occupies the target location.
+The walk() method includes all the checks that we had before plus one new. At the begging of the function, the move is not allowed if another zombie already occupies the target location.
 
-The main logic in chasePlayer() method is to identify in which direction should be the next step.
+The main logic in chasePlayer() method is to determine the direction of the next step.
 Let's look at an example.
 {{<figure src="/zb_example.JPG">}}
-The player's coordinates here are (5,25) while our zombie stands at (7,25). To identify the new location for a zombie, we will subtract the X coordinates, 5 - 7 = -2. Every time the result is negative, we will lower to value of X coordinate for the zombie's next move. In case the result would be positive, zombie should go the opposite way. Thus, the x coordinate should be increased.
+The player's coordinates here are (5,25) while our zombie stands at (7,25). To identify the new location for a zombie, we will subtract the X coordinates, 5 - 7 = -2. Every time the result is negative, we will lower to value of X coordinate for the zombie's next move. In case the result would be positive, zombie should go the opposite way. Thus, the x coordinate would be increased.
 
 Let's call the chasePlayer() function for one of the zombies in the main game loop.
 {{<figure src="/zb_chase_call.JPG">}}
@@ -139,7 +139,7 @@ Test your code. Is one of the zombies chasing you? What happens if you run away 
 
 ### Zombies chasing only if Player is close
 Our zombies should chase the player only if it's close enough to smell him.
-We already have one method for walking randomly and one for chasing. We can now rewrite the move() method to activate either one or the other. This will depend on the distance between zombie and player.
+We already have one method for walking randomly and one for chasing. We can now rewrite the move() method to activate either one or the other. This will depend on the distance between the zombie and the player.
 Update the move(self) method so that it has the below code.
 {{<figure src="/zb_move_new.JPG">}}
 In addition, update the main loop function so that the updated move() method is called.
@@ -171,7 +171,7 @@ Then add the lines marked as red below. This should be placed at the very bottom
 The first section (lines 104-108 on the picture) is responsible for creation of a configurable number of zombies. They are being added one by one to the list.
 The code in lines 113-114 iterates over each zombie in the list and executes the basic move() method on it.
 
-Test your code. Can you see 5 zombies walking? Try increasing the number. The number of zombies would have an impact on the performance. That will depend also on your computer's resources.
+Test your code. Can you see 5 zombies walking? Try increasing the number. The number of zombies would have an impact on the performance. Remember that performance depends also on your computer's resources.
 
 ### Steve collecting diamonds
 The player will have an opportunity to increase the number of lives available by collecting diamonds. At any point of time there will be one diamond and its location will be randomly determined.
@@ -188,17 +188,18 @@ To prevent this we need to extend the conditional statement in the walk method t
 Test your code. Can you spot a diamond within the arena? Do you see a message once you right click on the diamonds from short distance (you might need to hold a sword for this to work)? Do you get an extra life once you collected 5 diamonds?
 
 ### New zombies appear over time
-The game will get more difficult the longer you play it. We will achieve this by gradually adding more zombies to the arena over time. Add the lines marked with red below.
+The game will get more difficult the longer you play it. We will achieve this by gradually adding more zombies to the arena. Add the lines marked with red below.
 {{<figure src="/zb_new_zombies.JPG">}}
 We start with initiating NEW_ZOMBIE_FREQUENCY constant which defines how many iterations must take place for a new zombie to be created. We will be using "iteration" variable to count how many iterations passed.
-The new conditional statement is using the module operator "%". It returns the reminder from division of the of the two values. The "iteration" variable is incremented by 1 with every iteration and only once every 5 iterations the reminder from division will be equal 0. That the moment we will create a new zombie and add it to the list.
+The new conditional statement is using the module operator "%". It returns the reminder from division of the two numbers. The "iteration" variable is incremented by 1 with every iteration and only once every 5 iterations the reminder from division will be equal 0. At that moment we will create a new zombie and add it to the list.
+
 Test your code. Do you have new zombies popping up?
 
 ### Counting time
 The player needs to stay alive for as long as possible. In this step, we will measure the time.
 We will need to import the datetime library.
 {{<figure src="/zb_date_time.JPG">}}
-We will also take a timestamp at the beginning of the game and at the end. Subtracting the two will give the number of seconds to display.
+We will take a timestamp at the beginning of the game and at the end. Subtracting the two will give the number of seconds to display.
 Add the lines marked with red to your code.
 {{<figure src="/zb_time_check.JPG">}}
 Test your code. Does it display the number of seconds for the game?
@@ -208,11 +209,13 @@ Beta testers are people who test early versions of applications and are actually
 To do that, you can test different combination of the game parameters. For example, you could tweak the size of the arena ("SIZE"), how many zombies are created at the start ("NUMBER_OF_ZOMBIES"), how often are new zombies created ("NEW_ZOMBIE_FREQUENCY"), how short are the gaps between iterations (the argument of time.sleep()), how many diamonds are required for a new life ("DIAMONDS_PER_LIFE") or how far can zombie sense you ("ZOMBIE_SMELL_RANGE"). Test different values of these parameters.
 
 ### Challenge - performance tuning
-​While testing with some, more demanding combination of parameters (for example with a large number of zombies) your game will probably not be very responsive. Performance tuning is a form of refactoring where the code is modified with the aim to improve among others responsiveness while keeping the same functionality.
-In the case of our game, one of the biggest culprits for performance is the mc.player.getTilePos() function. Every time this function is called, the information needs to be read from the server and that takes time even if both applications are on the same computer. The main problem is that we are calling this function multiple times (can you count how many?) during a single iteration of the main game loop even though the player's location would probably stay the same for such a short time.
+​While testing with some, more demanding combination of parameters (for example with a large number of zombies) your game will probably not be very responsive. Performance tuning is a form of refactoring where the code is modified with the aim to improve, among others, the responsiveness while keeping the same functionality.
+
+In the case of our game, one of the biggest culprits for performance is the mc.player.getTilePos() function. Every time this function is called, the information needs to be read from the server and that takes time even if both applications are running on the same computer. The main problem is that we are calling this function multiple times (can you count how many?) during a single iteration of the main game loop even though the player's location would probably stay the same for such a short time.
 The solution to this problem is to read the player's position once and pass the value to other functions as an argument.
 
 On the main game loop code, it could look like this:
 {{<figure src="/zb_tuning.JPG">}}
 You would have to modify the relevant functions' definitions to accept the parameter and use it in their body instead of calling the mc.player.getTilePos() function.
+
 Test your code. Can you see an improvement?
