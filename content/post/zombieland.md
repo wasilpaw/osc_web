@@ -7,7 +7,6 @@ tags:        ["Python", "Minecraft"]
 categories:  ["Tutorials"]
 ---
 
-## Overview
 In this project, we will build a game involving zombies.
 {{<figure src="/zb_arena.JPG">}}
 Each zombie will be represented by two blocks on a square arena. They will be able to move around the arena. Each zombie will be controlled using an instance (object) of a class. Player will need to walk between zombies and avoid bites.
