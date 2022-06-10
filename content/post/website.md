@@ -33,7 +33,7 @@ At this point your website would look very basic. Let's copy some of the content
 
 ### New category
 Let's add another category. This can be done by creating a new .md file inside the "content/en" folder. Execute the below command in your commnad line terminal.
-{{< highlight>}}
+{{< highlight Bash>}}
 hugo new en/offer.md
 {{< /highlight >}}
 Once the new file is created, copy all of the front matter parameters from contact.md file with the exception of title.
