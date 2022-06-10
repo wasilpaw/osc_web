@@ -3,6 +3,8 @@ title: "Zombieland"
 date: 2022-03-05T22:01:15Z
 draft: false
 author: Pawel Wasilewski
+tags:        ["Python", "Minecraft"]
+categories:  ["Tutorials"]
 ---
 
 ## Overview
