@@ -91,10 +91,7 @@ home = ["HTML", "RSS", "Algolia"]
   title = "Martin O'Hanlon"
   href =  "https://www.stuffaboutcode.com/"
 
-  [[params.bookmark_link]]
-  title =  "Martin Fowler"
-  href =  "https://martinfowler.com"
-  #[[params.bookmark_link]]
+   #[[params.bookmark_link]]
   #title = "ServiceMesher"
   #href =  "http://www.servicemesher.com"
   #[[params.bookmark_link]]
