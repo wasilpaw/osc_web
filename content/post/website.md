@@ -18,6 +18,10 @@ Hugo allows us to build beautiful websites without the need of knowing HTML.
 To start with, choose an imaginary company you would build the website for. It might be a football school, cake shop or any other business.
 
 
+### Design
+The website we are building will include some basic information about the company, the offer and announcements about promotional events. See the high level design: {{<figure src="/website/cakesh0_design.png">}}
+
+
 ### Install Hugo 
 
 Follow Hugo installation steps for Windows in here 
@@ -36,13 +40,14 @@ Within the command line move to the "Sites" folders and type the below command
 cd c:\Hugo\Sites\
 hugo new site example.com
 {{< /highlight >}}
-You should now have a new folder created called "example.com" with more folders and files underneath.
+You should now have a new folder created called "example.com" (or your own name) with more folders and files underneath.
 {{<figure src="/website/basic_website_created.JPG">}}
 
 Each Hugo website needs to use a theme which would be the main UI framework. 
 Hugo community offers extensive number of free themes. For this project we will start with "Ananke" theme [demo site](https://gohugo-ananke-theme-demo.netlify.app/).
-Download the Ananke theme as a zip from github https://github.com/theNewDynamic/gohugo-theme-ananke/archive/refs/heads/master.zip. Once downloaded, copy the extracted content into "themes" folder of your website and rename the folder to "ananke".
+Download the Ananke theme as a zip from github https://github.com/theNewDynamic/gohugo-theme-ananke/archive/refs/heads/master.zip. Once downloaded, copy the extracted content into "themes" folder of your website and rename the folder to "ananke".  
 Your folder structure should look like this:{{<figure src="/website/ananke_installed.JPG">}}
+It's important that between folder "archetypes" and "assets" and the "themes" on it's only one other folder called "ananke" as on the screenshot above. Otherwise, hugo will not find the theme data and your page will not be rendered.
 
 We've copied the theme files and the next step is to configure the website to use it. Locate the "config.toml" file in "example.com" folder and open it for editing.
 Update the title value to a name of your imaginary business and add a new line to define the theme as below
@@ -57,12 +62,18 @@ hugo serve -D
 Your website should be available under [http://localhost:1313/](http://localhost:1313/) and look like {{<figure src="/website/cakesh0p.JPG">}}
 
 ### Explore what the Ananke theme offers
-At this point your website would look very basic. Let's copy some of the content from the "exampleSite" folder inside Ananke theme location. Please copy all the files from "content" and "static" folders from the exampleSite to the corresponding folders in your main website. Copy also the "config.toml" file from the exampleSite folder into your main website replacing the previous config file. 
+At this point your website would look very basic. Let's copy some of the content from the "exampleSite" folder inside Ananke theme location. 
+
+Please copy :
+- "en" and "fr" folders from "content" folder in the exampleSite to *C:\Hugo\Sites\example.com\content*. 
+- "images" from "static" folders from the exampleSite to *C:\Hugo\Sites\example.com\static*.
+- "config.toml" file from the exampleSite folder into *C:\Hugo\Sites\example.com* replacing the previous config file (you can rename it to config.bak.toml if you want to keep it). 
 {{<figure src="/website/ananke_example.JPG">}}
+
+One more steps is to update the edit the new *C:\Hugo\Sites\example.com\config.toml*. As in a step above, update the "theme" to "ananke" which is the exact name of the folder we are using.
+
 Rebuild your website. You should see more content including two categories on the top right.
 
-### Design
-The website we are building will include some basic information about the company, the offer and announcements about promotional events. See the high level design: {{<figure src="/website/cakesh0_design.png">}}
 
 ### The main page image
 An image will be a key visual part of the main page. Search through the Internet for a free picture that would be a good representation of your business. It should have a horizontal orientation (ideally close to 1400x800 pixels but you can try others as well). 
