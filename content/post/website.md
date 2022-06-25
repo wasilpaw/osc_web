@@ -30,7 +30,7 @@ Instructions for other operating systems are here https://gohugo.io/getting-star
 
 ### Install the editor
 A good code  editor will make the web development much quicker. While developing Hugo websites, we will be using Markdown files for defining content of the pages and TOML for configuration. 
-A good choice for both of these languages might be [Microsoft Visual Studio Code](https://code.visualstudio.com/). It has out of the box Markdown support. You can easily add "Better TOML" extension in the tool. 
+A good choice for both of these languages might be [Microsoft Visual Studio Code](https://code.visualstudio.com/). It has out of the box Markdown support and you can easily add "Better TOML" extension from within the tool. 
 
 ### A basic website
 
@@ -126,3 +126,17 @@ Test your page. Check that the post is visible on the main page and you can open
 Let's create a second post, this one could be about an event and include a video. Run the *hugo new* command again with a different file name. Use the youtube shortcode to embed a video.
 {{<figure src="/website/second_post.JPG">}}
 Test your website. Do you see two post on the main page? Is the video working?
+
+### Favicon
+
+Favicon is a square icon that browsers associate with a website. You can find it on the browser's tabs and bookmarks list. Lets add it to our website. One way to find an icon related to your website is the browse online repositories like [https://iconarchive.com/](https://iconarchive.com/). You can also generate your own one using  [https://favicon.io/favicon-generator/](https://favicon.io/favicon-generator/). Your favicon icon should be in .png format and be copied into *C:\Hugo\Sites\example.com\static* folder. 
+Once the favicon file is ready, open the config.toml file in your editor and locate the *favicon* parameter. Insert the name of your favicon file as a value.
+{{<figure src="/website/config_favicon.JPG">}}
+Rebuild your website and check that you can see the favicon in your browser.
+{{<figure src="/website/favicon_browser.JPG">}}
+
+### Further enhancements 
+Your website is ready now but you can learn more Hugo form:
+* [Hugo official documentation](https://gohugo.io/getting-started/)
+* [Hugo tutorial on YouTube](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
+
