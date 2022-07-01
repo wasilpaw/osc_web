@@ -17,7 +17,7 @@ A local website generated build with Hugo - see "[A website using Hugo](https://
 ### Overview
 
 {{<figure src="/website/github_deploy2.png">}}
-Free hosting of static websites is provided by a service call [render.com](https://render.com/). Render can build a Hugo website basing on the source code. It has an integration with GitHub and can automatically rebuild the website every time we commit a change.
+Hosting of static websites is provided by many services and in this tutorial we will use one of them: [render.com](https://render.com/). Render can build a Hugo website basing on the source code. It has an integration with GitHub and can automatically rebuild the website every time we commit a change.
 
 ### Github
 We will use Github to store the source files for our website. If you don't have a github account, please register using [https://github.com/signup](https://github.com/signup). 
