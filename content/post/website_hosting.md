@@ -25,16 +25,16 @@ We will use Github to store the source files for our website. If you don't have 
 After registration, please download and install the [GitHub Desktop App](https://desktop.github.com/).
 In the app, go to "File" and "New Repository". In the new window, specify the name for your new repo and add description. Set the local path to *C:\Hugo\Sites*.
 {{<figure src="/website/github_app_new_repo.JPG">}}
-Open the *C:\Hugo\Sites* in the file explorer. Inside, you should see a new folder with the name your previous defined. The next step is to copy all the folders and files from your Hugo website folder (in my case *example.com*) to the new github repo folder.
+Open the *C:\Hugo\Sites* in the file explorer. Inside, you should see a new folder with the name your previously defined. The next step is to copy all the folders and files from your Hugo website folder (in my case *example.com*) to the new github repo folder.
 {{<figure src="/website/HugoFolderCopied.JPG">}}
-Once you copied the file, see if you can build the website from this folder using the standard *hugo serve -D* command in the command line and make sure it still works.
-From now on, you would only update the files in the folder. The old folder could be rename as kept as a backup.
+Once you copied the file, see if you can build the website from this folder using the standard *hugo serve -D* command in the command line.
+From now on, you would only update the files in the folder. The old folder could be renamed and kept as a backup.
 
 Switch over to the GitHub Desktop app. You should see a lot of files listed as changed. GitHub App has detected that we have added something to the repo folder.
 {{<figure src="/website/github_app_files_added.JPG">}}
 Type "the first commit" into the *summary* field below the list of files and click *Commit to main*. 
 
-The final step is to copy your local repo with all the content to the GitHub servers. Click the *Publish repository* on the top menu.
+The final step is to copy your local repo with all the content to the GitHub servers. Click *Publish repository* on the top menu.
 Once the upload is finished, go to [github.com](https://github.com/) and check if your repository and the list files are there.
 
 ### Render
@@ -46,7 +46,7 @@ If you don't see your repository on the list, you might need to add it via *Conf
 Once the deployment is finished, check if your website is available under the URL provided by Render.
 
 ### Website update
-Your website should be now fully functional but there's a problem with some of the images. This is because the *baseURL* parameter is not set to the location of our website. Open the *config.toml* file from your local git repository and update with your website address.
+Your website should be now fully functional but there's a problem with some of the images. This is because the *baseURL* parameter is not set to the location of our website. Open the *config.toml* file from your local git repository and update it with your website address.
 {{<figure src="/website/baseurl.JPG">}}
 Once you saved the file, you should see a new change detected in the GitHub Desktop app.
 Add a description of the change in the *summary* field and commit the changes.
