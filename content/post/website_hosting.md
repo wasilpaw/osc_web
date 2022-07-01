@@ -2,7 +2,7 @@
 title:       "Automated hosting of a Hugo website"
 subtitle:    ""
 description: ""
-date:        2022-06-24
+date:        2022-07-01
 author:      "Pawel Wasilewski"
 image:       ""
 tags:        ["Hugo", "web", "git"]
@@ -12,7 +12,7 @@ draft: false
 This tutorial describes how to make a Hugo based website available for everyone over the Internet. The website would be automatically rebuilt every time we promote a change to the code repository. All of this for free.
 
 ### Preconditions
-A website generated with Hugo - see "[A website using Hugo](https://ohsnapcoders.com/post/website/)" tutorial.
+A local website generated build with Hugo - see "[A website using Hugo](https://ohsnapcoders.com/post/website/)" tutorial.
 
 ### Overview
 
@@ -46,7 +46,7 @@ If you don't see your repository on the list, you might need to add it via *Conf
 Once the deployment is finished, check if your website is available under the URL provided by Render.
 
 ### Website update
-Your website should be now fully functional but there's a problem with some of the images. This is because the *baseURL* parameter is not set to the location of our website. Open the *config.toml* file from your local git repository and update to your website address.
+Your website should be now fully functional but there's a problem with some of the images. This is because the *baseURL* parameter is not set to the location of our website. Open the *config.toml* file from your local git repository and update with your website address.
 {{<figure src="/website/baseurl.JPG">}}
 Once you saved the file, you should see a new change detected in the GitHub Desktop app.
 Add a description of the change in the *summary* field and commit the changes.
