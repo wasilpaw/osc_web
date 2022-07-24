@@ -1,7 +1,7 @@
 ---
 title: "Construction"
 date: 2022-02-27T20:22:05Z
-draft: false
+draft: true
 author: Pawel Wasilewski
 ---
 
