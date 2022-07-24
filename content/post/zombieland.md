@@ -96,10 +96,10 @@ Test your code.
 While testing you might have noticed that our zombies don't respect the boundaries of the arena...
 {{<figure src="/zb_runaway_zombie.JPG">}}
 We need to explicitly limit their moves if the new coordinates would lie outside of the arena.
-Add the below conditional statement and the new variables inside the randomMove() method.
+Add the below conditional statements and the new variables inside the randomMove() method.
 {{<figure src="/zb_limits.JPG">}}
 
-Test your code. You might temporarily hardcode the coordinates of your zombie and place it on the edge so that it quicker to validate the changes. Zombies on the edge should be static more often (4/9 chances vs 5/9 to move)
+Test your code. You might try to temporarily hardcode the coordinates of your zombie and place it on the edge of the arena so that it's quicker to validate the changes. Zombies on the edge should be static more often (4/9 chances to stand still vs 5/9 to move).
 
 ### The player in the arena
 Lets firstly teleport the player to the corner of the arena.
