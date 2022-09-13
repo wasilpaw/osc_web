@@ -2,7 +2,7 @@
 title:       "Detonate a castle in Minecraft"
 subtitle:    ""
 description: ""
-date:        2021-02-15
+date:        2022-04-15
 author:      "Pawel Wasilewski"
 image:       ""
 tags:        ["Minecraft", "Python"]

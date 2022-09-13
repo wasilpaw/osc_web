@@ -2,7 +2,7 @@
 title:       "A website using Hugo"
 subtitle:    ""
 description: ""
-date:        2022-06-09
+date:        2021-06-09
 author:      "Pawel Wasilewski"
 image:       ""
 tags:        ["Hugo", "web"]

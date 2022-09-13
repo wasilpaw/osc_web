@@ -2,7 +2,7 @@
 title:       "Automated hosting of a Hugo website"
 subtitle:    ""
 description: ""
-date:        2022-07-01
+date:        2021-07-01
 author:      "Pawel Wasilewski"
 image:       ""
 tags:        ["Hugo", "web", "git"]
