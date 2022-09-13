@@ -9,7 +9,7 @@ tags:        ["Minecraft", "Python"]
 categories:  ["Tutorials"]
 ---
 
-TNT is one of the blocks most favourited by the Minecraft players and we are going to mess with it today. In our game, Steve will detonate the entrance to the castle after standing on the coloured brick.
+TNT is one of the blocks most favourited by the Minecraft players and we are going to mess with it today. In our game, Steve will detonate the entrance to the castle after standing on a coloured brick.
 
 {{<figure src="/castle/First1.png">}}
 
