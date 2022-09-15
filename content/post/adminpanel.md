@@ -151,6 +151,10 @@ Test your program. Does it pass through the login screen when the password is co
 
 {{<figure src="/gui/Login_screen_wrong.png">}}
 
+### Reference code
+
+You can access the code for this project here: https://github.com/wasilpaw/ohsnapcoders/blob/main/adminpanel.py
+
 ### Challenges
 
 - Try to help your users select the right kind of file. Currently, your program accepts all files. Can you display a message when the selected file extension is not ".csv"?

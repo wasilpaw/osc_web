@@ -66,7 +66,7 @@ Then there's one column for each variable containing the latest time element.
 
 ### Set the alarm
 
-Time to set the alarm. We will use the built-in "input()" function that displays the message and return the string typed in by the user. We will then need to cast this string to integer by using "int()" function. This is required so that the values could be later compared to the current system time.
+Time to set the alarm. We will use the built-in "input()" function that displays the message and returns the string typed in by the user. We will then need to cast this string to integer by using "int()" function. This is required so that the values could be later compared to the current system time.
 
 {{<figure src="/alarmclock/SetAlarmFunct.png">}}
 
@@ -81,6 +81,10 @@ The "playsound()" function needs only to take the name of your file so make sure
 {{<figure src="/alarmclock/FireFunction.png">}}
 
 **Test** your program. Can you hear the sound when the alarm time is reached?
+
+### Reference code
+
+You can access the code for this project here: https://github.com/wasilpaw/ohsnapcoders/blob/main/alarmclock.py
 
 ### Challenges
 

@@ -206,6 +206,10 @@ Add the lines marked with red to your code.
 {{<figure src="/zb_time_check.JPG">}}
 Test your code. Does it display the number of seconds for the game?
 
+### Reference code
+
+You can access the code for this project here: https://github.com/wasilpaw/ohsnapcoders/blob/main/zombieland_final.py 
+
 ### Become a beta tester
 Beta testers are people who test early versions of applications and are actually paid to do that. Your goal as a beta tester is to find bugs but also provide guidance how playing the game might be more enjoyable.
 To do that, you can test different combination of the game parameters. For example, you could tweak the size of the arena ("SIZE"), how many zombies are created at the start ("NUMBER_OF_ZOMBIES"), how often are new zombies created ("NEW_ZOMBIE_FREQUENCY"), how short are the gaps between iterations (the argument of time.sleep()), how many diamonds are required for a new life ("DIAMONDS_PER_LIFE") or how far can zombie sense you ("ZOMBIE_SMELL_RANGE"). Test different values of these parameters.

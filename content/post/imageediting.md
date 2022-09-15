@@ -107,6 +107,10 @@ The meme should look like this:
 
 Now change the text and to create your own meme. Modify the size of the text and location so that it's fits visually. You can also try different font types. Check the list of the pre-installed Win10 fonts HERE.
 
+### Reference code
+
+You can access the code for this project here: https://github.com/wasilpaw/ohsnapcoders/blob/main/meme.py
+
 ### Challenges
 
 Pillow library has many more functions. You could flip images, crop, create thumbnails, apply filters that could detect contours. Try some of the examples from below:​
