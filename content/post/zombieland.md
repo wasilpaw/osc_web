@@ -5,7 +5,7 @@ draft: false
 author: Pawel Wasilewski
 tags:        ["Python", "Minecraft","OOP"]
 categories:  ["Tutorials"]
----
+--- 
 
 In this project, we will build a game involving zombies.
 {{<figure src="/zb_arena.JPG">}}
